@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+	https://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<util:list list-class="java.util.LinkedList" id="list">
+		<value>abc</value>
+		<value>def</value>
+		<value>ghi</value>
+		<value>jkl</value>
+		<null/>
+	</util:list>
+	
+	<util:set set-class="java.util.TreeSet" id="set">
+		<value>123</value>
+		<value>456</value>
+		<value>789</value>
+	</util:set>
+	
+	<util:map map-class="java.util.TreeMap" id="map">
+		<entry key="abc" value="123"/>
+		<entry key="def" value="456"/>
+		<entry key="ghi" value="789"/>
+	</util:map>
+	
+	<util:properties id="prop">
+		<prop key="key">value</prop>
+		<prop key="key1">value1</prop>
+	</util:properties>
+	
+	<bean class="com.kgprojects.beans.InjectCollections" name="obj" autowire="byName"/>
+</beans>

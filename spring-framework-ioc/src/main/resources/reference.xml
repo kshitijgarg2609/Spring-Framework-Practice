@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.kgprojects.beans.ARef" name="objA1">
+		<property name="value" value="356"/>
+	</bean>
+	
+	<bean class="com.kgprojects.beans.BRef" name="objB1">
+		<property name="value" value="35346"/>
+		<property name="obj">
+			<ref bean="objA1"/>
+		</property>
+	</bean>
+	
+	<bean class="com.kgprojects.beans.BRef" name="objB2">
+		<property name="value" value="6342"/>
+		<property name="obj" ref="objA1"/>
+	</bean>
+	
+	<bean class="com.kgprojects.beans.ARef" name="objA2">
+		<property name="value" value="5124"/>
+	</bean>
+	
+	<bean class="com.kgprojects.beans.BRef" name="objB3" p:value="10243" p:obj-ref="objA2"/>
+</beans>

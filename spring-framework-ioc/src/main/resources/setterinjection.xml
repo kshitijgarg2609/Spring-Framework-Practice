@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.kgprojects.beans.Student" name="student1">
+		<property name="id">
+			<value>123</value>
+		</property>
+		<property name="name">
+			<value>XYZ</value>
+		</property>
+		<property name="address">
+			<value>ABC</value>
+		</property>
+	</bean>
+	
+	<bean class="com.kgprojects.beans.Student" name="student2">
+		<property name="id" value="456"/>
+		<property name="name" value="kg"/>
+		<property name="address" value="sdf"/>
+	</bean>
+	
+	<bean class="com.kgprojects.beans.Student" name="student3" p:id="893" p:name="sadsf" p:address="afddgd"/>
+	
+</beans>
